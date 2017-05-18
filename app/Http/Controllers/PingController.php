@@ -9,7 +9,7 @@ class PingController extends Controller
     public function ping()
     {
         $ips = [
-            'free' => ['192.168.1.5'],
+            'free' => '192.168.1.5',
             'routeur' => '192.168.1.5',
             'fail' => '192.168.1.80',
             'zebra-FLM' => '192.168.1.145',
@@ -17,7 +17,7 @@ class PingController extends Controller
         ];
 
        $result=[];
-        foreach ($ips as $nom => $ip) $result[$nom] = $this->makePing($ip);
+        //foreach ($ips as $nom => $ip) $result[$nom] = $this->makePing($ip);
 
         return view('ping',[
             'result' => $result

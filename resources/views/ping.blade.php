@@ -2,6 +2,9 @@
 @section('content')
     <br>
     <h1>Monitoring des différentes ressources</h1>
+    <hardware v-for="ip in ips">
+
+    </hardware>
     @foreach($result as $name => $statut)
     <div class="row">
         <div class="col-8">  <strong>{{strtoupper($name)}}</strong></div>

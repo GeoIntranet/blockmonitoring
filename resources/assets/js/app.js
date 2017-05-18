@@ -15,6 +15,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('hardware', require('./components/Hardware.vue'));
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -23,6 +24,9 @@ $(function () {
 const app = new Vue({
     el: '#app',
     data:{
-        'ip'
+        ips:[
+            '192.168.1.5',
+            '192.168.1.149',
+            ]
     }
 });
