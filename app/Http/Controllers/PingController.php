@@ -17,7 +17,7 @@ class PingController extends Controller
         ];
 
        $result=[];
-        //foreach ($ips as $nom => $ip) $result[$nom] = $this->makePing($ip);
+        foreach ($ips as $nom => $ip) $result[$nom] = $this->makePing($ip);
 
         return view('ping',[
             'result' => $result
